@@ -1,0 +1,9 @@
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'avenir';
+}
+.main__post{
+  margin-bottom: 1rem;
+}

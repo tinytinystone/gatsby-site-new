@@ -1,0 +1,9 @@
+.post{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'avenir';
+}
+.post__button-next{
+  margin-bottom: 1rem;
+}
