@@ -19,6 +19,9 @@ const Template = ({ data, pageContext }) => {
         }}
       />
 
+      <div className="post__button-main">
+        <Link to="/">Main</Link>
+      </div>
       <div className="post__button-next">
         {next && (
           <Link to={next.frontmatter.path}>

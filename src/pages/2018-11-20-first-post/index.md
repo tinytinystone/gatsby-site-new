@@ -11,7 +11,7 @@ from을 구현할 때는 가급적이면 DOM이 아니라 React에서 제어되�
 
   1. HTML 태그 상에서 value(혹은 checked)에 값을 넘기게 되면 제어되는 컴포넌트로서 작동할 수 있으므로, React 상에서 사용되는 `defaultValue` 혹은 `defaultChecked` 등의 어트리뷰트를 통해 기본값을 표시할 수 있다.
 
-```javascript
+```html
 <input type="text" defaultValue="기본값으로 표시됩니다." />
 <input type="checkbox" defaultChecked={true} />
 <input type="radio" defaultChecked={false} />
