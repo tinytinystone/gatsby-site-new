@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { graphql, Link } from 'gatsby'
 import Header from '../components/Header'
 import './index.css'
 
-const Layout = ({ data }) => {
-  const { edges } = data.allMarkdownRemark
-  return (
+
+class Layout extends Component {
+  constructor(props) {
+    super(props)
+  }
+
+  render() {
+    const { data } = this.props
+    const { edges } = data.allMarkdownRemark
+
+    return (
     <div>
       <Header />
       <div className="main">
@@ -24,6 +32,7 @@ const Layout = ({ data }) => {
       </div>
     </div>
   )
+  }
 }
 
 export const query = graphql`
