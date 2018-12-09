@@ -1,9 +1,9 @@
-.main{
+.main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'avenir';
+  font-family: 'Hack';
 }
-.main__post{
+.main__post {
   margin-bottom: 1rem;
 }

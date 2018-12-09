@@ -55,7 +55,7 @@ friend_info = [
 
 ### 코드 (JavaScript)
 
-```js
+```javascript
 // 미로 정보를 객체로 저장한다.
 const maze = {
   a: ['e'],
