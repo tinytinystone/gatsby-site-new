@@ -20,7 +20,7 @@ excerpt: '리덕스 공부'
 
 Redux 를 이해하기 위해서는 `store`, `action`, `dispatch`, `subscribe`, `reduce`에 대한 이해가 필요하다.
 
-![redux 구조](../../images/redux_structure_1.png)
+![redux 구조](../images/redux_structure_1.png)
 
 - store: 여러 기능을 갖추고 있는 **상태 저장소**
 - action: 투입되는 상태 변화를 나타내는 값(객체)

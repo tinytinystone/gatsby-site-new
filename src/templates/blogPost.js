@@ -1,15 +1,16 @@
-import React from 'react'
-import { graphql, Link } from 'gatsby'
-import './blogPost.css'
+import React from 'react';
+import { graphql, Link } from 'gatsby';
+import './blogPost.css';
+import Layout from '../components/Layout';
 
 const Template = ({ data, pageContext }) => {
-  const { next, prev } = pageContext
+  const { next, prev } = pageContext;
 
-  const { markdownRemark } = data
-  const title = markdownRemark.frontmatter.title
-  const html = markdownRemark.html
+  const { markdownRemark } = data;
+  const title = markdownRemark.frontmatter.title;
+  const html = markdownRemark.html;
   return (
-    <div className="post">
+    <Layout className="post">
       <h1>{title}</h1>
       <div
         className="blogpost"
@@ -36,9 +37,9 @@ const Template = ({ data, pageContext }) => {
           </Link>
         )}
       </div>
-    </div>
-  )
-}
+    </Layout>
+  );
+};
 
 export const query = graphql`
   query($pathSlug: String!) {
@@ -49,6 +50,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default Template
+export default Template;
