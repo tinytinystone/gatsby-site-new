@@ -1,0 +1,55 @@
+@import './common.scss';
+
+/* 스타일 초기화 */
+html,
+body,
+div,
+span,
+p,
+a,
+em,
+img,
+dl,
+dt,
+dd,
+form,
+label,
+legend,
+article,
+aside,
+figure,
+option,
+figcaption,
+footer,
+header,
+nav,
+section,
+select {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 1em;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* 본문 스타일 */
+html {
+  font-size: 10px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+/* 레이아웃 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Hack';
+  color: #202020;
+  font-weight: 400;
+  font-size: 1.4rem;
+  overflow: auto;
+}

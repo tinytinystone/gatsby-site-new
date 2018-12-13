@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import Header from './Header';
-import './Layout.css';
+import s from './Layout.module.scss';
 
 export default class Layout extends Component {
   render() {
     return (
-      <React.Fragment>
+      <div className={s.wrapper}>
         <Header />
-        <main className="main">{this.props.children}</main>
-        <footer className="footer">© 2018 PUFFIN</footer>
-      </React.Fragment>
+        <main className={s.main}>{this.props.children}</main>
+        <footer className={s.footer}>© 2018 PUFFIN</footer>
+      </div>
     );
   }
 }

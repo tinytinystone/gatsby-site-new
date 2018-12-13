@@ -1,31 +1,21 @@
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import React from 'react';
+import { StaticQuery, graphql, Link } from 'gatsby';
+
+import s from './Header.module.scss';
 
 const TitleAndDescription = ({ data }) => {
-  const title = data.site.siteMetadata.title
-  const description = data.site.siteMetadata.description
+  const title = data.site.siteMetadata.title;
+  const description = data.site.siteMetadata.description;
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        fontFamily: 'avenir',
-      }}
-    >
-      <h2 style={{ marginBottom: 0 }}>{title}</h2>
-      <p
-        style={{
-          marginTop: 0,
-          opacity: 0.5,
-        }}
-      >
-        {description}
-      </p>
+    <div className={s.header}>
+      <Link to="/">
+        <h1 className={s.headerTitle}>{title}</h1>
+      </Link>
+      <p className={s.headerDesc}>{description}</p>
     </div>
-  )
-}
+  );
+};
 
 const Header = () => {
   return (
@@ -42,7 +32,7 @@ const Header = () => {
       `}
       render={data => <TitleAndDescription data={data} />}
     />
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

@@ -1,0 +1,21 @@
+.wrapper {
+  max-width: 650px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0 2rem;
+  font-family: 'Hack';
+  display: flex;
+  flex-direction: column;
+}
+.main {
+  height: 75vh;
+  padding: 0 1rem;
+  overflow: auto;
+}
+.footer {
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+}
