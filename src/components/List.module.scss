@@ -1,9 +1,6 @@
 .mainPost {
   margin-bottom: 1.2rem;
 }
-a:hover {
-  font-weight: 800;
-}
 .time {
   font-size: 0.8rem;
   text-transform: uppercase;
@@ -16,4 +13,7 @@ a:hover {
   font-size: 1.4rem;
   font-weight: 500;
   margin: 0;
+}
+.mainTitle:hover {
+  font-weight: 800;
 }
