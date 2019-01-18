@@ -4,24 +4,26 @@ date: '2018-12-10'
 title: 'TIL: Redux 1'
 tags: ['redux', 'react', 'TIL']
 excerpt: '리덕스 공부'
-image: './redux_structure_1.png'
+image: '/static/redux_structure_1-0b21a844ae93e3c56b9eaea0a2afb8f5.png'
 ---
 
 # 요약
 
 ## Redux 소개
 
-- **Redux** 는 상태관리 라이브러리로, context 기능과 고급 상태관리 기법 두 가지로 이뤄져 있다.
-  - 과거 context API 가 라이브러리 사용자만을 위해 비공개 설정 되어 있던 시기, context 기능을 사용하기 위해서는 무조건 Redux 를 사용했어야 했다.
-    - 지금은 context API 가 일반 사용자도 사용할 수 있으므로, 해당 기능을 사용한다는 목적으로 새로 시작하는 프로젝트에 굳이 Redux 를 써야할 필요는 없다.
-    - 다만, 기존 프로젝트에는 많이 적용되어 있으므로 학습해두는 편이 좋다.
-  - 무언가를 값으로 다루면 조합성이 좋아지는데 (ex. Generator, Promise...) Redux 는 **상태 변화** 를 값으로 만들었다. 상태가 변화하는 것을 값으로 만들었으므로, 상태 변화 로깅이나 undo/redo, 시간여행 등 기존 state 에서 상상하기 힘들었던 기능이 가능해진다.
+**Redux** 는 상태관리 라이브러리로, context 기능과 고급 상태관리 기법 두 가지로 이뤄져 있다.
+
+과거 context API 가 라이브러리 사용자만을 위해 비공개 설정 되어 있던 시기, context 기능을 사용하기 위해서는 무조건 Redux 를 사용했어야 했다.
+
+- 지금은 context API 가 일반 사용자도 사용할 수 있으므로, 해당 기능을 사용한다는 목적으로 새로 시작하는 프로젝트에 굳이 Redux 를 써야할 필요는 없다.
+- 다만, 기존 프로젝트에는 많이 적용되어 있으므로 학습해두는 편이 좋다.
+- 무언가를 값으로 다루면 조합성이 좋아지는데 (ex. Generator, Promise...) Redux 는 **상태 변화** 를 값으로 만들었다. 상태가 변화하는 것을 값으로 만들었으므로, 상태 변화 로깅이나 undo/redo, 시간여행 등 기존 state 에서 상상하기 힘들었던 기능이 가능해진다.
 
 ## Redux 의 구성
 
 Redux 를 이해하기 위해서는 `store`, `action`, `dispatch`, `subscribe`, `reduce`에 대한 이해가 필요하다.
 
-![redux 구조](./redux_structure_1.png)
+![redux 구조](/static/redux_structure_1-0b21a844ae93e3c56b9eaea0a2afb8f5.png)
 
 - store: 여러 기능을 갖추고 있는 **상태 저장소**
 - action: 투입되는 상태 변화를 나타내는 값(객체)
@@ -40,6 +42,6 @@ Redux 를 이해하기 위해서는 `store`, `action`, `dispatch`, `subscribe`, 
 
 ## 코드
 
-- [Reduce Exercise 1(repl.it)](https://repl.it/@tinytinystone/redux-exercise-1)
+[Reduce Exercise 1(repl.it)](https://repl.it/@tinytinystone/redux-exercise-1)
 
 [Reduce Exercise 2(repl.it)](https://repl.it/@tinytinystone/redux-exercise-2)

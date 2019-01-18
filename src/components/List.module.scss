@@ -1,11 +1,19 @@
-.mainList {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 .mainPost {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 a:hover {
   font-weight: 800;
+}
+.time {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+.excerpt {
+  font-size: 0.9rem;
+  margin: 0.5rem 0 1rem;
+}
+.mainTitle {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0;
 }

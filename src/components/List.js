@@ -11,7 +11,15 @@ export default class List extends Component {
           const { frontmatter } = edge.node;
           return (
             <div className={s.mainPost} key={frontmatter.path}>
-              <Link to={frontmatter.path}>{frontmatter.title}</Link>
+              <div className={s.metaData}>
+                <time dateTime={frontmatter.date} className={s.time}>
+                  {frontmatter.date}
+                </time>
+              </div>
+              <h2 className={s.mainTitle}>
+                <Link to={frontmatter.path}>{frontmatter.title}</Link>
+              </h2>
+              <p className={s.excerpt}>{frontmatter.excerpt}</p>
             </div>
           );
         })}

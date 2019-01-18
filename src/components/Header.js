@@ -6,14 +6,21 @@ import s from './Header.module.scss';
 const TitleAndDescription = ({ data }) => {
   const title = data.site.siteMetadata.title;
   const description = data.site.siteMetadata.description;
-
   return (
-    <div className={s.header}>
-      <Link to="/">
-        <h1 className={s.headerTitle}>{title}</h1>
-      </Link>
-      <p className={s.headerDesc}>{description}</p>
-    </div>
+    <header className={s.header}>
+      <h1 className={s.headerTitle}>
+        <Link to="/">{title}</Link>
+      </h1>
+      <div className={s.headerDesc}>{description}</div>
+      <nav>
+        <div>
+          <Link to="/about">About</Link>
+        </div>
+        <div>
+          <Link to="/">Blog</Link>
+        </div>
+      </nav>
+    </header>
   );
 };
 

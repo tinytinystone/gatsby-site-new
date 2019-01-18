@@ -1,6 +1,6 @@
 .blogPost a {
-  font-weight: 800;
   color: #ea4235;
+  text-decoration: underline;
 }
 .postButton {
   padding: 2rem;
@@ -9,4 +9,11 @@
 .postButton a {
   padding-bottom: 1rem;
   text-decoration: underline;
+}
+img {
+  width: 100%;
+}
+ul,
+ol {
+  padding-inline-start: 1rem;
 }

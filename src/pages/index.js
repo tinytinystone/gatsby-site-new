@@ -6,18 +6,17 @@ import s from './index.module.scss';
 import Layout from '../components/Layout';
 import List from '../components/List';
 
+import 'normalize.css';
+
 class App extends Component {
   constructor(props) {
     super(props);
   }
-
   render() {
     const { data } = this.props;
-    const { edges } = data.allMarkdownRemark;
-
     return (
       <Layout>
-        <List edges={edges} />
+        <List edges={data.allMarkdownRemark.edges} />
       </Layout>
     );
   }
@@ -25,6 +24,13 @@ class App extends Component {
 
 export const query = graphql`
   query HomepageQuery {
+    allFile(filter: { extension: { eq: "png" } }) {
+      edges {
+        node {
+          publicURL
+        }
+      }
+    }
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
@@ -32,6 +38,8 @@ export const query = graphql`
             title
             path
             date
+            excerpt
+            image
           }
         }
       }

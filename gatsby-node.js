@@ -1,24 +1,26 @@
-const path = require('path')
+const path = require('path');
 
 const createTagPages = (createPage, posts) => {
-  const allTagsIndexTemplate = path.resolve('src/templates/allTagsIndex.js')
-  const singleTagIndexTemplate = path.resolve('src/templates/singleTagIndex.js')
+  const allTagsIndexTemplate = path.resolve('src/templates/allTagsIndex.js');
+  const singleTagIndexTemplate = path.resolve(
+    'src/templates/singleTagIndex.js'
+  );
 
-  const postsByTag = {}
+  const postsByTag = {};
 
   posts.forEach(({ node }) => {
     if (node.frontmatter.tags) {
       node.frontmatter.tags.forEach(tag => {
         if (!postsByTag[tag]) {
-          postsByTag[tag] = []
+          postsByTag[tag] = [];
         }
 
-        postsByTag[tag].push(node)
-      })
+        postsByTag[tag].push(node);
+      });
     }
-  })
+  });
 
-  const tags = Object.keys(postsByTag)
+  const tags = Object.keys(postsByTag);
 
   createPage({
     path: '/tags',
@@ -26,10 +28,10 @@ const createTagPages = (createPage, posts) => {
     context: {
       tags: tags.sort(),
     },
-  })
+  });
 
   tags.forEach(tagName => {
-    const posts = postsByTag[tagName]
+    const posts = postsByTag[tagName];
 
     createPage({
       path: `/tags/${tagName}`,
@@ -38,15 +40,15 @@ const createTagPages = (createPage, posts) => {
         posts,
         tagName,
       },
-    })
-  })
-}
+    });
+  });
+};
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
-    const blogPostTemplate = path.resolve('src/templates/blogPost.js')
+    const blogPostTemplate = path.resolve('src/templates/blogPost.js');
 
     resolve(
       graphql(
@@ -68,12 +70,12 @@ exports.createPages = ({ graphql, actions }) => {
           }
         `
       ).then(result => {
-        const posts = result.data.allMarkdownRemark.edges
+        const posts = result.data.allMarkdownRemark.edges;
 
-        createTagPages(createPage, posts)
+        createTagPages(createPage, posts);
 
         posts.forEach(({ node }, index) => {
-          const path = node.frontmatter.path
+          const path = node.frontmatter.path;
           createPage({
             path,
             component: blogPostTemplate,
@@ -82,11 +84,11 @@ exports.createPages = ({ graphql, actions }) => {
               prev: index === 0 ? null : posts[index - 1].node,
               next: index === posts.length - 1 ? null : posts[index + 1].node,
             },
-          })
+          });
 
-          resolve()
-        })
+          resolve();
+        });
       })
-    )
-  })
-}
+    );
+  });
+};

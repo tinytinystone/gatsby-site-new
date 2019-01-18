@@ -6,9 +6,8 @@ export default class Layout extends Component {
   render() {
     return (
       <div className={s.wrapper}>
-        <Header />
+        <Header props="props" />
         <main className={s.main}>{this.props.children}</main>
-        <footer className={s.footer}>© 2018 PUFFIN</footer>
       </div>
     );
   }
