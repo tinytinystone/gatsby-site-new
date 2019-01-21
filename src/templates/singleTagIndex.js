@@ -1,8 +1,8 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { Link } from 'gatsby';
 import Layout from '../components/Layout';
 
-import '../pages/index.module.scss';
+// import '../pages/index.module.scss';
 
 const SingleTagTemplate = ({ data, pageContext }) => {
   const { posts, tagName } = pageContext;

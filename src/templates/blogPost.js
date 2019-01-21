@@ -10,12 +10,9 @@ const Template = ({ data, pageContext }) => {
   const title = markdownRemark.frontmatter.title;
   const htmlBody = markdownRemark.html;
   return (
-    <Layout className="post">
+    <Layout>
       <h1>{title}</h1>
-      <div
-        className={s.blogPost}
-        dangerouslySetInnerHTML={{ __html: htmlBody }}
-      />
+      <div className="post" dangerouslySetInnerHTML={{ __html: htmlBody }} />
       <div className={s.postButton}>
         <div>
           {next && (

@@ -8,6 +8,23 @@ body {
   font-family: 'avenir';
   font-weight: 400;
   color: #202020;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.65;
+}
+.post {
+  a {
+    color: #ea4235;
+    text-decoration: underline;
+  }
+  img {
+    width: 100%;
+  }
+  ul,
+  ol {
+    padding-inline-start: 1rem;
+  }
+  hr {
+    margin: 2rem 0;
+    border: 1px solid #aaa;
+  }
 }
