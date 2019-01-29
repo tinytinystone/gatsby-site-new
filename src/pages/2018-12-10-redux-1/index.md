@@ -4,7 +4,6 @@ date: '2018-12-10'
 title: 'TIL: Redux 1'
 tags: ['redux', 'react', 'TIL']
 excerpt: '리덕스 공부'
-image: '/static/redux_structure_1.png', '/static/redux_dev_tools_1.png'
 ---
 
 ([egghead.io Redux 기초강의](https://egghead.io/courses/getting-started-with-redux) 및 패스캠퍼스 프론트엔드 개발 스쿨 강의 내용을 바탕으로 정리한 내용입니다.)
@@ -20,8 +19,6 @@ Redux 는 상태관리 라이브러리로, **1. context 기능**과 **고급 상
 다만, 기존 프로젝트에는 많이 적용되어 있으므로 학습해두는 편이 좋다.
 
 ### 1-2. 고급 상태관리 기법
-
-![redux_dev_tools](/static/redux_dev_tools_1.png)
 
 무언가를 값으로 다루면 조합성이 좋아지는데 (ex. Generator, Promise...) Redux 는 **상태 변화** 를 값으로 만들었다. 상태가 변화하는 것을 값으로 만들었으므로, 상태 변화 로깅이나 undo/redo, 시간여행 등 기존 state 에서 상상하기 힘들었던 기능이 가능해진다.
 
@@ -82,8 +79,6 @@ function squareAll(items) {
 UI 혹은 뷰단에서 상태가 순수함수일 때 가장 예측가능한 상태라는 점에 대해 들어본 적이 있을 것이다. (e.g. React) 리덕스는 이전 상태와 디스패치된 액션을 받아 다음 상태를 반환하는 순수함수로 상태를 변경해야 한다는 또다른 아이디어를 통하여 위와 같은 접근을 보충한다. 전달받은 상태를 변경하지 않고 새로운 객체를 반환하는 것이 매우 중요하다. 규모가 큰 애플리케이션에서도 다음 상태가 이전 상태와 디스패치된 액션에 따라 어떻게 계산되어야 하는지를 관리하는 오로지 하나의 함수만이 있을 뿐이다. 이를 통하여 상태의 이전 참조를 계속 유지할 수 있고, 상태를 바꾸는 게 아니기 때문에 리덕스는 속도가 빠르다.
 
 ### 1-4. Redux 의 구성
-
-![redux 구조](/static/redux_structure_1.png)
 
 #### 1-4-1. redux 용어
 
