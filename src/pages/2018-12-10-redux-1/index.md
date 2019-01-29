@@ -7,6 +7,8 @@ excerpt: '리덕스 공부'
 image: '/static/redux_structure_1.png', '/static/redux_dev_tools_1.png'
 ---
 
+([egghead.io Redux 기초강의](https://egghead.io/courses/getting-started-with-redux) 및 패스캠퍼스 프론트엔드 개발 스쿨 강의 내용을 바탕으로 정리한 내용입니다.)
+
 ## 1. Redux 소개
 
 Redux 는 상태관리 라이브러리로, **1. context 기능**과 **고급 상태관리 기법** 두 가지로 이뤄져 있다.
