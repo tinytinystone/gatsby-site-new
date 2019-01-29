@@ -1,5 +1,5 @@
 ---
-path: '/first-post'
+path: '/review-project-1'
 date: '2018-11-11'
 title: '11/20/2018 리액트 학습일지'
 tags: ['TIL', 'React']
