@@ -582,6 +582,8 @@ const todoApp = combineReducers({
 });
 ```
 
+[React Todo List Example (Adding a Todo, codesandbox)](https://codesandbox.io/s/rm5j9v2p3q)
+
 ##### 4-1-3-1. combineReducers() 바닥부터 구현하기
 
 ```js
