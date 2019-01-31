@@ -448,7 +448,7 @@ AddTodo = connect(
 
 이제 AddTodo 는 상태 의존적인 어떤 prop 도 내려주지 않지만, dispatch() 자체를 함수로 전달하여 컴포넌트가 prop 에서 읽고 사용할 수 있습니다. 컨텍스트에 대해 걱정하거나 ContextTypes 를 지정할 필요가 없습니다.
 
-# 하지만 이렇게 하는 것은 시간낭비입니다...
+### 하지만 이렇게 하는 것은 시간낭비입니다...
 
 상태에서 prop 을 계산하지 않으면 스토어를 subscribe 해야하는 이유는 무엇입니까? 스토어를 구독할 필요가 없기 때문에, mapStateToProps 를 인수로 사용하지 않고 connect()를 호출하고 대신 null 을 전달할 수 있습니다. 이것은 스토어를 구독할 필요가 없다는 것을 알려줍니다.
 
@@ -525,6 +525,38 @@ const FilterLink = connect(
 ```
 
 react-redux 의 connect()를 사용했으므로, contextTypes 를 포함하여 이전의 FilterLink 구현을 제거할 수 있습니다.
+
+### 요약
+
+Footer 컴포넌트는 3 개의 FilterLink 컴포넌트를 렌더링하며, 각각의 FilterLink 컴포넌트는 다른 filter prop 을 가집니다. filter prop 은 어떤 filter 와 일치하는지를 명시해주고 있습니다.
+
+```js
+const Footer = () => {
+  <p>
+    Show: <FilterLink filter="SHOW_ALL">All</FilterLink>
+    ...
+  </p>;
+};
+```
+
+이 prop 은 mapDispatchToLinkProps 와 mapStateToProps 가 두 번째 인자로 받는 ownProps 객체에서도 사용이 가능합니다.
+
+```js
+const mapStateToLinkProps = (
+  state,
+  ownProps
+) => {...};
+const mapDispatchToLinkProps = (
+  dispatch,
+  ownProps
+) => {...}
+```
+
+이 두 개의 함수를 connect 를 호출함으로써 내려줍니다. connect 함수는 FilterLink 라는 이름의 컨테이너 컴포넌트를 반환합니다.
+
+FilterLink 컴포넌트는 mapDispatchToProps 와 mapStateToProps 로부터 반환하는 prop 을 가져와서 Link 컴포넌트에 prop 으로 내려줍니다.
+
+FilterLink 컴포넌트에 filter 값을 사용할 수 있습니다만, 그 아래에 있는 Link 컴포넌트는 계산된 active 및 onClick 값을 받습니다.
 
 ## action creator 추출하기
 
