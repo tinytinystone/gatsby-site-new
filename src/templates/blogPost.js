@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
-import s from './blogPost.module.scss';
+import './blogPost.scss';
 import Layout from '../components/Layout';
 
 const Template = ({ data, pageContext }) => {
@@ -13,7 +13,7 @@ const Template = ({ data, pageContext }) => {
     <Layout>
       <h1>{title}</h1>
       <div className="post" dangerouslySetInnerHTML={{ __html: htmlBody }} />
-      <div className={s.postButton}>
+      <div className="postButton">
         <div>
           {next && (
             <Link to={next.frontmatter.path}>

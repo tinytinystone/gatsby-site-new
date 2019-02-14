@@ -1,17 +1,17 @@
 import React from 'react';
 import { StaticQuery, graphql, Link } from 'gatsby';
 
-import s from './Header.module.scss';
+import './Header.scss';
 
 const TitleAndDescription = ({ data }) => {
   const title = data.site.siteMetadata.title;
   const description = data.site.siteMetadata.description;
   return (
-    <header className={s.header}>
-      <h1 className={s.headerTitle}>
+    <header className="header">
+      <h1 className="headerTitle">
         <Link to="/">{title}</Link>
       </h1>
-      <div className={s.headerDesc}>{description}</div>
+      <div className="headerDesc">{description}</div>
       <nav>
         <div>
           <Link to="/about">About</Link>
