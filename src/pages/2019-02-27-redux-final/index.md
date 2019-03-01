@@ -10,9 +10,7 @@ excerpt: '리덕스 공부한 내용을 최종 정리했습니다'
 
 1. 기간: 19-01-29 ~ 19-02-28
 
-[강의 링크]()
-
-## Getting Started with Redux
+<!-- ## Getting Started with Redux
 
 1. Redux: The Single Immutable State Tree
 
@@ -124,7 +122,7 @@ Redux (FooterLink)
 
 1. Redux: Extracting Action Creators
 
-[강의 링크]()
+[강의 링크]() -->
 
 ## Building React Applications with Idiomatic Redux
 
