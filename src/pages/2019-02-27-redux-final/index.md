@@ -45,11 +45,13 @@ Redux: React Counter Example
 
 [강의 링크]()
 
-[강의 링크]()Redux: Avoiding Array Mutations with concat(), slice(),
-and ...spread
+Redux: Avoiding Array Mutations with concat(), slice(), and ...spread
 
-[강의 링크]()Redux: Avoiding Object Mutations with Object.assign() and
-...spread
+[강의 링크]()
+
+Redux: Avoiding Object Mutations with Object.assign() and ...spread
+
+[강의 링크]()
 
 Redux: Writing a Todo List Reducer (Adding a Todo)
 
