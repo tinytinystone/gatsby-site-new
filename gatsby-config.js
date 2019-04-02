@@ -4,6 +4,7 @@ module.exports = {
     description: '프로그래밍의 세계를 여행하는 히치하이커의 여행일지',
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-sass`,
       options: {

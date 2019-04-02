@@ -16,6 +16,7 @@ class App extends Component {
   }
   render() {
     const { data } = this.props;
+    console.log(data);
     return (
       <>
         <Helmet
@@ -47,7 +48,6 @@ export const query = graphql`
             path
             date
             excerpt
-            image
           }
         }
       }
