@@ -3,7 +3,7 @@ path: '/redux-selector-normalize'
 date: '2019-03-01'
 title: 'Redux selector & state normalize'
 tags: ['redux', 'react', 'TIL']
-excerpt: 'selector와 state normalize에 대해'
+excerpt: 'selector와 state normalize 워크샵 자료'
 ---
 
 [Codesandbox: before](https://codesandbox.io/s/886wmq4022)

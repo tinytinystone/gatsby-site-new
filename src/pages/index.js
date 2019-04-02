@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { graphql } from 'gatsby';
+import { Helmet } from 'react-helmet';
+import favicon from '../favicon-96x96.png';
 
 import './index.scss';
 
@@ -15,9 +17,15 @@ class App extends Component {
   render() {
     const { data } = this.props;
     return (
-      <Layout>
-        <List edges={data.allMarkdownRemark.edges} />
-      </Layout>
+      <>
+        <Helmet
+          title={`Puffin's devlog: Home`}
+          link={[{ rel: 'shortcut icon', href: `${favicon}` }]}
+        />
+        <Layout>
+          <List edges={data.allMarkdownRemark.edges} />
+        </Layout>
+      </>
     );
   }
 }

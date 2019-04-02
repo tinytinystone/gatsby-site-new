@@ -15,6 +15,10 @@ const Template = ({ data, pageContext }) => {
   const htmlBody = markdownRemark.html;
   return (
     <>
+      <Helmet
+        title={`Puffin's devlog: ${title}`}
+        link={[{ rel: 'shortcut icon', href: `${favicon}` }]}
+      />
       <Layout>
         <h1>{title}</h1>
         <div className="post" dangerouslySetInnerHTML={{ __html: htmlBody }} />
