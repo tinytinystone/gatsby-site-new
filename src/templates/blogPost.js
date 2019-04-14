@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
-import './blogPost.scss';
+import s from './blogPost.module.scss';
 
 import Layout from '../components/Layout';
 import favicon from '../favicon-96x96.png';
@@ -21,8 +21,11 @@ const Template = ({ data, pageContext }) => {
       />
       <Layout>
         <h1>{title}</h1>
-        <div className="post" dangerouslySetInnerHTML={{ __html: htmlBody }} />
-        <div className="postButton">
+        <div
+          className={`post ${s.post}`}
+          dangerouslySetInnerHTML={{ __html: htmlBody }}
+        />
+        <div className={s.postButton}>
           <div>
             {next && (
               <Link to={next.frontmatter.path}>

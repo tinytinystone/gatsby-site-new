@@ -11,9 +11,6 @@ import List from '../components/List';
 import 'normalize.css';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     const { data } = this.props;
     console.log(data);

@@ -4,6 +4,7 @@ date: '2018-12-10'
 title: 'TIL: Redux 1'
 tags: ['redux', 'react', 'TIL']
 excerpt: '리덕스 공부'
+image: ['/static/redux_dev_tools_1.png']
 ---
 
 ([egghead.io Redux 기초강의](https://egghead.io/courses/getting-started-with-redux) 및 패스캠퍼스 프론트엔드 개발 스쿨 강의 내용을 바탕으로 정리한 내용입니다.)

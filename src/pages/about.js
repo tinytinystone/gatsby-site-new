@@ -32,10 +32,15 @@ export default class About extends Component {
             방송국에서 다큐멘터리를 만들었고 로펌에 다니기도 했습니다.
           </p>
           <h3>skill</h3>
-          <ul>
-            <li>Language: JavaScript(ES6+), Python, HTML/CSS</li>
-            <li>Others: React.js, Git, Sass, Redux, React-router, GraphQL</li>
-          </ul>
+          <dl>
+            <dt>Development:</dt>
+            <dd>
+              JavaScript(ES6+), HTML/CSS, Python, React.js, Git, Sass, Redux,
+              Redux-thunk, React-router
+            </dd>
+            <dt>Others:</dt>
+            <dd>(proficient)English</dd>
+          </dl>
           <h3>others</h3>
           <ul>
             <li>jeesoo.hong at gmail com</li>
@@ -52,6 +57,24 @@ export default class About extends Component {
               <a href="https://www.linkedin.com/in/jeesoohong">linkedIn</a>
             </li>
           </ul>
+          <h3>projects</h3>
+          <dl>
+            <dt>
+              <a href="https://github.com/tinytinystone/fds-react-store">
+                react/redux를 적용한 쇼핑몰 프로젝트(개인)
+              </a>
+            </dt>
+            <dd>쇼핑몰</dd>
+            <dt>
+              <a href="https://github.com/tinytinystone/python-lecture-web-and-frontend">
+                파이썬 웹 개발 올인원 패키지 강의(자료 및 스크립트)
+              </a>
+            </dt>
+            <dd>강의</dd>
+            <dt>
+              <a href="" />
+            </dt>
+          </dl>
         </Layout>
       </>
     );

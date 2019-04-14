@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Header from './Header';
-import './Layout.scss';
+import s from './Layout.module.scss';
 
 export default class Layout extends Component {
   render() {
     return (
-      <div className="wrapper">
+      <div className={s.wrapper}>
         <Header props="props" />
-        <main className="main">{this.props.children}</main>
+        <main className={s.main}>{this.props.children}</main>
       </div>
     );
   }
