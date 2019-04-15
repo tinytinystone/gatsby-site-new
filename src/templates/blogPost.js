@@ -26,14 +26,14 @@ const Template = ({ data, pageContext }) => {
           dangerouslySetInnerHTML={{ __html: htmlBody }}
         />
         <div className={s.postButton}>
-          <div>
+          <div className={s.postButtonItem}>
             {next && (
               <Link to={next.frontmatter.path}>
                 Next: {`${next.frontmatter.title}`}
               </Link>
             )}
           </div>
-          <div>
+          <div className={s.postButtonItem}>
             {prev && (
               <Link to={prev.frontmatter.path}>
                 Prev: {`${prev.frontmatter.title}`}

@@ -24,7 +24,7 @@ export default class List extends Component {
           );
         })}
 
-        <div>
+        <div className={s.tags}>
           <Link to="/tags">Browse by Tag</Link>
         </div>
       </div>

@@ -12,11 +12,11 @@ const TitleAndDescription = ({ data }) => {
         <Link to="/">{title}</Link>
       </h1>
       <div className={s.headerDesc}>{description}</div>
-      <nav>
-        <div>
+      <nav className={s.nav}>
+        <div className={s.navItem}>
           <Link to="/about">About</Link>
         </div>
-        <div>
+        <div className={s.navItem}>
           <Link to="/">Blog</Link>
         </div>
       </nav>

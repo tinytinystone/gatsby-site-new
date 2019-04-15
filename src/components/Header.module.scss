@@ -1,12 +1,18 @@
 .headerTitle {
   margin: 3rem 0 0 0;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   font-size: 2rem;
   font-weight: 900;
+  text-transform: uppercase;
 }
 .headerDesc {
   opacity: 0.3;
 }
-nav div {
+.nav {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-transform: uppercase;
+}
+.navItem {
   display: inline-block;
   margin-top: 0.6rem;
   padding-right: 2rem;
