@@ -4,6 +4,12 @@ module.exports = {
     description: '프로그래밍의 세계를 여행하는 히치하이커의 여행일지',
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-138347678-1',
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-sass`,
