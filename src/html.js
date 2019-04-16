@@ -13,7 +13,7 @@ export default function HTML(props) {
         />
         <meta
           name="google-site-verification"
-          content="-YQkvJ6lJ2s-aY1O9U7iGTThO38yCLyJI0sfkcXa7uY"
+          content="aJ6n7V940-UlUEcfU1XbbZkXHX2juKH42lEapGarYlY"
         />
         <meta
           name="naver-site-verification"
