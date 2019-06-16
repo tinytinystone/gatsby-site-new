@@ -6,6 +6,7 @@ import s from './blogPost.module.scss';
 
 import Layout from '../components/Layout';
 import favicon from '../favicon-96x96.png';
+import ReactUtterences from 'react-utterances';
 
 const Template = ({ data, pageContext }) => {
   const { next, prev } = pageContext;
@@ -13,6 +14,8 @@ const Template = ({ data, pageContext }) => {
   const { markdownRemark } = data;
   const title = markdownRemark.frontmatter.title;
   const htmlBody = markdownRemark.html;
+  const repo = 'tinytinystone/blog-comments';
+
   return (
     <>
       <Helmet
@@ -25,6 +28,10 @@ const Template = ({ data, pageContext }) => {
           className={`post ${s.post}`}
           dangerouslySetInnerHTML={{ __html: htmlBody }}
         />
+        <div>
+          {' '}
+          <ReactUtterences repo={repo} type={'url'} />
+        </div>
         <div className={s.postButton}>
           <div className={s.postButtonItem}>
             {next && (

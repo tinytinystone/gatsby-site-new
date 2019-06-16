@@ -31,6 +31,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
+    "react-utterances": "^0.6.4",
     "tunnel-agent": "^0.6.0"
   },
   "keywords": [
