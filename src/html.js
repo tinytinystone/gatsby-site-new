@@ -1,6 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+const MathJaxConfig = `
+window.MathJax = {
+  tex2jax: {
+    inlineMath: [['$', '$'] ],
+    displayMath: [['$$', '$$'] ],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: {
+      equationNumbers: {autoNumber: 'AMS'},
+      extensions: ['AMSmath.js', 'AMSsymbols.js', 'color.js'],
+    },
+  }
+};
+`;
+
 export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>
@@ -36,6 +52,11 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
+        <script dangerouslySetInnerHTML={{ __html: MathJaxConfig }} />
+        <script
+          defer
+          src="https://cdn.bootcss.com/mathjax/2.7.4/latest.js?config=TeX-AMS_SVG"
+        />
       </body>
     </html>
   );
