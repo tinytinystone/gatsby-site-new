@@ -8,7 +8,9 @@ import Layout from '../components/Layout';
 import favicon from '../favicon-96x96.png';
 import ReactUtterences from 'react-utterances';
 
-const Template = ({ data, pageContext }) => {
+import SEO from '../components/SEO';
+
+const Template = ({ data, pageContext, location }) => {
   const { next, prev } = pageContext;
 
   const { markdownRemark } = data;
@@ -18,11 +20,12 @@ const Template = ({ data, pageContext }) => {
 
   return (
     <>
-      <Helmet
-        title={`Puffin's devlog: ${title}`}
-        link={[{ rel: 'shortcut icon', href: `${favicon}` }]}
-      />
       <Layout>
+        <SEO
+          title={`Puffin's devlog: ${title}`}
+          link={[{ rel: 'shortcut icon', href: `${favicon}` }]}
+          pathname={location.pathname}
+        />
         <h1>{title}</h1>
         <div
           className={`post ${s.post}`}
