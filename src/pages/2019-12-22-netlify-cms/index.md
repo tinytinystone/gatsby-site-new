@@ -54,7 +54,6 @@ media_folder: "public/images" # 파일을 직접 업로드할 수 있는 기능�
       "when": "2019-07-20T21:12:00",
       "where": "Seokchon dong, Songpa-gu, Seoul, Korea"
     },
-    // 여기에 객체를 추가
     ]
 }
 
