@@ -12,7 +12,7 @@ export default class List extends Component {
           return (
             <div className={s.mainPost} key={frontmatter.path}>
               <div className={s.metaData}>
-                <time dateTime={frontmatter.date} className="time">
+                <time dateTime={frontmatter.date} className={s.time}>
                   {frontmatter.date}
                 </time>
               </div>
