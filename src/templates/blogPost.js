@@ -14,7 +14,7 @@ const Template = ({ data, pageContext, location }) => {
   const { next, prev } = pageContext;
 
   const { markdownRemark } = data;
-  const title = markdownRemark.frontmatter.title;
+  const { title, excerpt, image } = markdownRemark.frontmatter;
   const htmlBody = markdownRemark.html;
   const repo = 'tinytinystone/blog-comments';
 
@@ -24,6 +24,8 @@ const Template = ({ data, pageContext, location }) => {
         <SEO
           title={`Puffin's devlog: ${title}`}
           link={[{ rel: 'shortcut icon', href: `${favicon}` }]}
+          description={excerpt}
+          image={image}
           pathname={location.pathname}
         />
         <h1>{title}</h1>
@@ -62,6 +64,8 @@ export const query = graphql`
       html
       frontmatter {
         title
+        excerpt
+        image
       }
     }
   }
