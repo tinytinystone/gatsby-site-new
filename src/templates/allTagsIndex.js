@@ -13,7 +13,6 @@ const AllTagsTemplate = ({ data, pageContext }) => {
         link={[{ rel: 'shortcut icon', href: `${favicon}` }]}
       />
       <Layout>
-        <div>태그로 찾아보기</div>
         <ul>
           {tags.map((tagName, index) => {
             return (

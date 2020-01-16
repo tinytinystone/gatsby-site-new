@@ -19,6 +19,9 @@ const TitleAndDescription = ({ data }) => {
         <div className={s.navItem}>
           <Link to="/">Blog</Link>
         </div>
+        <div className={s.navItem}>
+          <Link to="/tags">Tags</Link>
+        </div>
       </nav>
     </header>
   );

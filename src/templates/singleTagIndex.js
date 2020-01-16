@@ -14,7 +14,7 @@ const SingleTagTemplate = ({ data, pageContext }) => {
         link={[{ rel: 'shortcut icon', href: `${favicon}` }]}
       />
       <Layout>
-        <div>{`${tagName}`} 관련 포스트</div>
+        <div>{`${tagName}`}</div>
         <ul>
           {posts.map((post, index) => {
             return (
