@@ -3,7 +3,7 @@ path: '/juice-vote'
 date: '2020-04-16'
 title: '공약쥬스 개발기'
 tags: ['retrospective', 'juice-vote', 'side-project']
-excerpt: ''
+excerpt: '사이드 프로젝트로 공약쥬스를 개발하면서 느끼고 생각한 것'
 ---
 
 [공약쥬스](https://www.juice.vote) 서비스를 개발하면서 배우고 느낀 점을 정리해 본다.
