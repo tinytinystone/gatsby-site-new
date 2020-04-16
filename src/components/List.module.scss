@@ -7,13 +7,14 @@
   opacity: 0.8;
 }
 .excerpt {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   margin: 0.5rem 0 1rem;
 }
 .mainTitle {
   font-size: 1.3rem;
-  font-weight: 600;
+  font-weight: 700;
   margin: 0;
+  letter-spacing: 1px;
 }
 .tags {
   margin: 4rem 0;
@@ -28,5 +29,5 @@
   cursor: pointer;
 }
 .pages li:hover {
-  font-weight: bold;
+  font-weight: 700;
 }

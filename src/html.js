@@ -6,7 +6,7 @@ export default function HTML(props) {
     <html {...props.htmlAttributes}>
       <head>
         <link
-          href="https://fonts.googleapis.com/css?family=Noto+Serif+KR:400,600&display=swap"
+          href="https://fonts.googleapis.com/css?family=Noto+Serif+KR:400,700,900&display=swap"
           rel="stylesheet"
         />
         <meta charSet="utf-8" />

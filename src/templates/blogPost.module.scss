@@ -17,7 +17,16 @@ body {
   font-size: 15px;
   line-height: 1.65;
 }
+.title {
+  margin-bottom: 0;
+}
+.time {
+  display: block;
+  padding-left: 4px;
+  margin-bottom: 15px;
+}
 .post {
+  border-top: 1px dotted #eee;
   a {
     color: #ea4235;
     text-decoration: underline;

@@ -14,7 +14,7 @@ const Template = ({ data, pageContext, location }) => {
   const { next, prev } = pageContext;
 
   const { markdownRemark } = data;
-  const { title, excerpt, image } = markdownRemark.frontmatter;
+  const { title, date, excerpt, image } = markdownRemark.frontmatter;
   const htmlBody = markdownRemark.html;
   const repo = 'tinytinystone/blog-comments';
 
@@ -28,7 +28,10 @@ const Template = ({ data, pageContext, location }) => {
           image={image}
           pathname={location.pathname}
         />
-        <h1>{title}</h1>
+        <h1 className={s.title}>{title}</h1>
+        <time dateTime={date} className={s.time}>
+          {date}
+        </time>
         <div
           className={`post ${s.post}`}
           dangerouslySetInnerHTML={{ __html: htmlBody }}
@@ -64,6 +67,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        date
         excerpt
         image
       }

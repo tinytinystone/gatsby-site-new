@@ -5,13 +5,13 @@ import s from './Header.module.scss';
 
 const TitleAndDescription = ({ data }) => {
   const title = data.site.siteMetadata.title;
-  const description = data.site.siteMetadata.description;
+  // const description = data.site.siteMetadata.description;
   return (
     <header className={s.header}>
       <h1 className={s.headerTitle}>
         <Link to="/">{title}</Link>
       </h1>
-      <div className={s.headerDesc}>{description}</div>
+      {/*<div className={s.headerDesc}>{description}</div>*/}
       <nav className={s.nav}>
         <div className={s.navItem}>
           <Link to="/about">About</Link>

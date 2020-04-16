@@ -1,5 +1,5 @@
 ---
-path: '/2020week3'
+path: '/2020week4'
 date: '2020-01-26'
 title: '일기: 2020/1/20-1/26'
 tags: ['retrospective', 'weekly']

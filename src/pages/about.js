@@ -17,8 +17,10 @@ export default class About extends Component {
           <h3>whoami</h3>
           <p>
             서울에 살며 프로그래밍을 하는 홍지수입니다.{' '}
-            <a href="https://dable.io/">데이블</a>에서 웹 개발자로 일하고
-            있습니다.
+            <a className="link_underline" href="https://dable.io/">
+              데이블
+            </a>
+            에서 웹 개발자로 일하고 있습니다.
           </p>
           <p>
             패스트캠퍼스에서 프로그래밍 교육 프로덕트를 기획하는 일을 했습니다.
@@ -57,16 +59,36 @@ export default class About extends Component {
           <ul>
             <li>jeesoo.hong at gmail com</li>
             <li>
-              <a href="https://github.com/tinytinystone">github</a>
+              <a
+                className="link_underline"
+                href="https://github.com/tinytinystone"
+              >
+                github
+              </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/jeesoo.hong">facebook</a>
+              <a
+                className="link_underline"
+                href="https://www.facebook.com/jeesoo.hong"
+              >
+                facebook
+              </a>
             </li>
             <li>
-              <a href="https://twitter.com/tinytinystone">twitter</a>
+              <a
+                className="link_underline"
+                href="https://twitter.com/tinytinystone"
+              >
+                twitter
+              </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/jeesoohong">linkedIn</a>
+              <a
+                className="link_underline"
+                href="https://www.linkedin.com/in/jeesoohong"
+              >
+                linkedIn
+              </a>
             </li>
           </ul>
         </Layout>
