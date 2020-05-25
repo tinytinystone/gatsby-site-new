@@ -1,5 +1,5 @@
 ---
-path: '/debug-lambda'
+path: '/url'
 date: '2020-05-27'
 title: 'URL은 대소문자 구분을 할까'
 tags: ['url', 'web']
