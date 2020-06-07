@@ -11,13 +11,13 @@ URL은 대소문자를 구분할까?
 https://username:password@sub.example.com:8080/p/a/t/h?query=string#hash
 이라는 URL이 있다고 할 때, 이 URL의 구성을 살펴보면 다음과 같다.
 
-`https:`: protocol.
-`username:password`: auth.
-`sub.example.com:8080`: host. 
-`sub.example.com`: hostname
-`/p/a/t/h`: path. 서버 내에서 리소스 경로를 나타낸다.
-`8080`: port
-`?query=string`: search
+- `https:`: protocol.
+- `username:password`: auth.
+- `sub.example.com:8080`: host. 
+- `sub.example.com`: hostname
+- `/p/a/t/h`: path. 서버 내에서 리소스 경로를 나타낸다.
+- `8080`: port
+- `?query=string`: search
 
 이때, URL에서 프로토콜과 호스트 주소는 대소문자를 구분하지 않는다. 
 
@@ -27,7 +27,7 @@ https://username:password@sub.example.com:8080/p/a/t/h?query=string#hash
 
 최근 host 영역에서 대소문자를 구분하지 않는 것 때문에 에러를 낸 적이 있다.
 
-```
+```js
 const a = 'https://www.DaBLE.Io/ads/ABcdEFG?service=chosun'
 const b = new URL(a).toString()
 ```
