@@ -1,30 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { graphql } from 'gatsby';
-import { Helmet } from 'react-helmet';
-import favicon from '../favicon-96x96.png';
-
-import './index.scss';
 
 import Layout from '../components/Layout';
 import List from '../components/List';
 
-import 'normalize.css';
-
-class App extends Component {
-  render() {
-    const { data } = this.props;
-    return (
-      <>
-        <Helmet
-          title={`Puffin's devlog: Home`}
-          link={[{ rel: 'shortcut icon', href: `${favicon}` }]}
-        />
-        <Layout>
-          <List edges={data.allMarkdownRemark.edges} />
-        </Layout>
-      </>
-    );
-  }
+export default function App({ data }) {
+  return (
+    <>
+      <Layout>
+        <List edges={data.allMarkdownRemark.edges} />
+      </Layout>
+    </>
+  );
 }
 
 export const query = graphql`
@@ -51,4 +38,4 @@ export const query = graphql`
   }
 `;
 
-export default App;
+export const Head = () => <title>Puffin's devlog: Home</title>;

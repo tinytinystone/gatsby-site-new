@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'gatsby';
-import s from './List.module.scss';
 
 export default class List extends Component {
   constructor(props) {
@@ -10,7 +9,7 @@ export default class List extends Component {
       postsPerPage: 10,
     };
   }
-  handleClick = e => {
+  handleClick = (e) => {
     this.setState({
       currentPage: Number(e.target.id),
     });
@@ -24,19 +23,19 @@ export default class List extends Component {
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
     const currentPosts = edges.slice(indexOfFirstPost, indexOfLastPost);
 
-    const renderPosts = currentPosts.map(edge => {
+    const renderPosts = currentPosts.map((edge) => {
       const { frontmatter } = edge.node;
       return (
-        <div className={s.mainPost} key={frontmatter.path}>
-          <div className={s.metaData}>
-            <time dateTime={frontmatter.date} className={s.time}>
+        <div key={frontmatter.path} className="mb-2">
+          <div>
+            <time dateTime={frontmatter.date} className="text-13 text-gray-500">
               {frontmatter.date}
             </time>
           </div>
-          <h2 className={s.mainTitle}>
+          <h2 className="text-18">
             <Link to={frontmatter.path}>{frontmatter.title}</Link>
           </h2>
-          <p className={s.excerpt}>{frontmatter.excerpt}</p>
+          <p>{frontmatter.excerpt}</p>
         </div>
       );
     });
@@ -46,22 +45,26 @@ export default class List extends Component {
       pageNumbers.push(i);
     }
 
-    const renderPageNumbers = pageNumbers.map(number => {
+    const renderPageNumbers = pageNumbers.map((number) => {
       return (
         <li
           key={number}
           id={number}
-          style={currentPage === number ? { background: '#eee' } : undefined}
           onClick={this.handleClick}
+          className={`cursor-pointer flex items-center justify-center px-3 h-8 leading-tight text-blue-400 bg-white hover:text-blue-500 ${
+            currentPage === number && `bg-gray-100 font-bold`
+          }`}
         >
           {number}
         </li>
       );
     });
     return (
-      <div className={s.mainList}>
+      <div>
         {renderPosts}
-        <ul className={s.pages}>{renderPageNumbers}</ul>
+        <ul className="flex justify-center -space-x-px text-sm my-5 mx-auto">
+          {renderPageNumbers}
+        </ul>
       </div>
     );
   }
