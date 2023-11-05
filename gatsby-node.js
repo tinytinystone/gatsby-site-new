@@ -10,7 +10,7 @@ const createTagPages = (createPage, posts) => {
 
   posts.forEach(({ node }) => {
     if (node.frontmatter.tags) {
-      node.frontmatter.tags.forEach(tag => {
+      node.frontmatter.tags.forEach((tag) => {
         if (!postsByTag[tag]) {
           postsByTag[tag] = [];
         }
@@ -30,7 +30,7 @@ const createTagPages = (createPage, posts) => {
     },
   });
 
-  tags.forEach(tagName => {
+  tags.forEach((tagName) => {
     const posts = postsByTag[tagName];
 
     createPage({
@@ -51,25 +51,23 @@ exports.createPages = ({ graphql, actions }) => {
     const blogPostTemplate = path.resolve('src/templates/blogPost.js');
 
     resolve(
-      graphql(
-        `
-          query {
-            allMarkdownRemark(
-              sort: { order: ASC, fields: [frontmatter___date] }
-            ) {
-              edges {
-                node {
-                  frontmatter {
-                    path
-                    title
-                    tags
-                  }
+      graphql(`
+        query {
+          allMarkdownRemark(
+            sort: { order: ASC, fields: [frontmatter___date] }
+          ) {
+            edges {
+              node {
+                frontmatter {
+                  path
+                  title
+                  tags
                 }
               }
             }
           }
-        `
-      ).then(result => {
+        }
+      `).then((result) => {
         const posts = result.data.allMarkdownRemark.edges;
 
         createTagPages(createPage, posts);

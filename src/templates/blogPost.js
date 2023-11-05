@@ -15,15 +15,20 @@ const Template = ({ data, pageContext, location }) => {
   return (
     <>
       <Layout>
-        <h1>{title}</h1>
-        <time dateTime={date}>{date}</time>
-        <div dangerouslySetInnerHTML={{ __html: htmlBody }} />
+        <h1 className="text-24 text-green-500">{title}</h1>
+        <time className="text-gray-500 mb-5 block" dateTime={date}>
+          {date}
+        </time>
+        <div
+          className="border-dotted border-gray-100 border-t-2 markdown pt-5"
+          dangerouslySetInnerHTML={{ __html: htmlBody }}
+        />
         <div>
           {' '}
           <ReactUtterences repo={repo} type={'url'} />
         </div>
-        <div>
-          <div>
+        <div className="p-2 center">
+          <div className="pb-1 underline">
             {next && (
               <Link to={next.frontmatter.path}>
                 Next: {`${next.frontmatter.title}`}
