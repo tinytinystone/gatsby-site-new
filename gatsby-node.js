@@ -53,15 +53,14 @@ exports.createPages = ({ graphql, actions }) => {
     resolve(
       graphql(`
         query {
-          allMarkdownRemark(
-            sort: { order: ASC, fields: [frontmatter___date] }
-          ) {
+          allMarkdownRemark(sort: { frontmatter: { date: ASC } }) {
             edges {
               node {
                 frontmatter {
                   path
                   title
                   tags
+                  image
                 }
               }
             }

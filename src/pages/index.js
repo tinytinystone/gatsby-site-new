@@ -23,7 +23,7 @@ export const query = graphql`
         }
       }
     }
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       edges {
         node {
           frontmatter {
@@ -31,6 +31,7 @@ export const query = graphql`
             path
             date
             excerpt
+            image
           }
         }
       }
